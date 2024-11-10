@@ -34,7 +34,7 @@ def calculate_expression(number1, number2, operater):
         if operater == '+':
             answer = number1 + number2
         elif operater == '-':
-            answer = number1 + number2
+            answer = number1 - number2
         elif operater == '*':
             answer = number1 * number2
         else:
@@ -55,8 +55,9 @@ def math_quiz():
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
     for _ in range(total_question):
+        # Get two random numbers and an operator
         number1 = get_random_integer(1, 10)
-        number2 = get_random_integer(1, 5)
+        number2 = get_random_integer(-10, 5)
         operater = get_random_operater()
 
         problem, correct_answer = calculate_expression(number1, number2, operater)
